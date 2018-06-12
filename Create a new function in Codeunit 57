@@ -1,0 +1,5 @@
+CalculatePostedSalesInvoiceTotals1(VAR SalesInvoiceHeader : Record "Sales Invoice Header";VAR VATAmount : Decimal;SalesInvoiceLine : Record "Sales Invoice Line")
+IF SalesInvoiceHeader.GET(SalesInvoiceLine."Document No.") THEN BEGIN
+  SalesInvoiceHeader.CALCFIELDS(Amount,"Amount Including VAT","Invoice Discount Amount","Amount Excl. Prepaid","Amount Excl. Prepaid with VAT");
+  VATAmount := SalesInvoiceHeader."Amount Including VAT" - SalesInvoiceHeader.Amount;
+END;
