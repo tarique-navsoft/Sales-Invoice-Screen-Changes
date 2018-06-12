@@ -1,0 +1,11 @@
+//This is from 132(Posted Sales Invoice)
+CurrPage.SalesInvLines.PAGE.GetDocumentNo("No.");//NPU-123 06-12-18----Pushed Document No to Sales Invoice Subform
+
+
+//This is from 133(Posted Slaes Invoice Subform)
+Name	DataType	Subtype	Length
+SalesInvoiceHeader	Record	Sales Invoice Header	
+bool	Boolean		
+bool1	Boolean		
+DocNo	Code		10
+
