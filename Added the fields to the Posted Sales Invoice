@@ -1,0 +1,6 @@
+Expanded	Type	SubType	SourceExpr	Name	Caption
+0	Field		TotalSalesInvoiceHeader."Amount Excl. Prepaid"	Total Amount Excl. VAT	Total Amount Excl. Tax
+0	Field		TotalSalesInvoiceHeader.Amount	Total Amount1 Excl. VAT	Total Amount Excl. Tax
+0	Field		VATAmount	Total VAT 1Amount	Total Tax
+0	Field		TotalSalesInvoiceHeader."Amount Including VAT"	Total Amount Incl. VAT	Total Amount Incl. Tax
+0	Field		TotalSalesInvoiceHeader."Amount Excl. Prepaid with VAT"	Total Amount1 Incl. VAT	Total Amount Incl. Tax
