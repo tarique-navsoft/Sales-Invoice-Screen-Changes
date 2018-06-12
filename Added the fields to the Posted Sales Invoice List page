@@ -1,0 +1,22 @@
+Expanded	Type	SubType	SourceExpr	Name	Caption
+0	Field		Amount	<Amount>	<Amount>
+0	Field		"Amount Including VAT"	<Amount Including VAT>	<Amount Including Tax>
+0	Field		"Amount Excl. Prepaid"	<Amount>	Amount-------------------------------------------------New
+0	Field		"Amount Excl. Prepaid with VAT"	<Amount Including VAT>	Amount Including VAT-------------New
+
+//+++++++++++++++++++++++++++Coding for Updating the above fields++++++++++++++++++++++++++++
+//+++NPU-123 06-12-18---Updated the Amount with VAT
+Bool:=TRUE;
+Bool1:=FALSE;
+IF ("Prepayment Order No."='') THEN BEGIN
+  Bool:=TRUE;
+  Bool1:=FALSE;
+END ELSE BEGIN
+  Bool:=FALSE;
+  Bool1:=TRUE;
+END;
+//---------------------------------------------
+Variables are:
+Name	DataType	Subtype	Length
+Bool	Boolean		
+Bool1	Boolean		
