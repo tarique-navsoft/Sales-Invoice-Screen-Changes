@@ -8,4 +8,24 @@ SalesInvoiceHeader	Record	Sales Invoice Header
 bool	Boolean		
 bool1	Boolean		
 DocNo	Code		10
+//+++Coding++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//+++NPU-123 06-12-18 ---Don't include prepayment line on invoice if it is not prepayment invoice also don't total prepayment line
+bool:=FALSE;
+bool1:=TRUE;
+//MESSAGE(DocNo);
+IF SalesInvoiceHeader.GET(DocNo) THEN BEGIN
+IF SalesInvoiceHeader."Prepayment Order No."='' THEN 
+    Rec.SETFILTER("No.",'<>%1','12150');
+END;
+IF SalesInvoiceHeader."Prepayment Order No."='' THEN BEGIN
+    bool:=TRUE;
+    bool1:=FALSE;
+END;
+//-----------------------------------------------------------------------
+//--Function & Function Call
+GetDocumentNo
+//++++++++++Function Call++++++++++++++++++++++++
+//+++NPU-123 06-12-18 ---Made new function into Codeunit 57 to use new field created in sales invoice header table
 
+DocumentTotals.CalculatePostedSalesInvoiceTotals1(TotalSalesInvoiceHeader,VATAmount,Rec);
+//-----------------------------------------------------------
