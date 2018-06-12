@@ -1,0 +1,4 @@
+Enabled	Field No.	Field Name	Data Type	Length	Description
+Yes	80019	Amount Excl. Prepaid	Decimal		NPU-123
+Yes	80020	Prepaid Amount	Decimal		NPU-123
+Yes	80021	Amount Excl. Prepaid with VAT	Decimal		NPU-123
